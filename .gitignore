@@ -1,2 +1,28 @@
-venv/
 Data/
+# Virtual environment
+venv/
+
+# VSCode settings
+.vscode/
+
+# Python cache and logs
+__pycache__/
+*.py[cod]
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files and cache
+.cache/
+*.cache
+
+# Unit test cache
+.pytest_cache/
+*.cover
+
+# Build and distribution
+*.egg-info/
+dist/
+build/
