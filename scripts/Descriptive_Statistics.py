@@ -1,18 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from data_loader import load_data
 
 
 
-data = pd.read_csv('../Data/raw_analyst_ratings.csv')
-
-
-required_columns = ['headline', 'url', 'publisher', 'date', 'stock']
-if not all(col in data.columns for col in required_columns):
-    raise ValueError("Dataset is missing required columns")
-
-
-data['date'] = pd.to_datetime(data['date'], errors='coerce')
+data = load_data('../Data/raw_analyst_ratings.csv')
 
 
 data['headline_length'] = data['headline'].str.len()
